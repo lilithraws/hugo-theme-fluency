@@ -12,12 +12,12 @@
         <h3 class="title">
           <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
         </h3>
-        <div class="content summary">
+        <!--<div class="content summary">
           <p>{{ .Summary | safeHTML }}</p>
           {{ if .Truncated }}
             <span class="hellip">&hellip;</span>
           {{ end }}
-        </div>
+        </div>-->
         <a class="readmore" href="{{ .Permalink }}" aria-label="{{ i18n "readMore" }}">{{ i18n "readMore" }}</a>
         <div class="right">
           {{ if $showSection }}<span class="section"><a href="{{ .Section | relURL }}">{{ .Section }}</a></span>{{ end}}
