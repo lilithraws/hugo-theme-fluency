@@ -40,3 +40,6 @@ other = "Share with"
 
 [toc]
 other = "Table of Contents"
+
+[searchPlaceHolder]
+other = "Search..."

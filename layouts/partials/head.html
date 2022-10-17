@@ -70,14 +70,15 @@
   <!-- Use Hugo Pipes to process the Sass file (convert to CSS, minify, and add a hash) -->
   {{ $base_style := resources.Get "css/basic.scss" | toCSS }}
   {{ $main_style := resources.Get "css/main.scss" | toCSS }}
+  {{ $search_style := resources.Get "css/search.scss" | toCSS }}
 
-  {{ $CSS := slice $base_style $main_style | resources.Concat "style.css" }}
+  {{ $CSS := slice $base_style $main_style $search_style | resources.Concat "style.css" }}
 
   {{ if not .Site.IsServer }}
     {{ $CSS := $CSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $CSS.Permalink }}" integrity="{{ $CSS.Data.Integrity }}" rel="preload stylesheet" as="style"/>
+    <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" integrity="{{ $CSS.Data.Integrity }}" rel="preload stylesheet" as="style"/>
   {{ else }}
-    <link rel="stylesheet" href="{{ $CSS.Permalink }}" rel="preload stylesheet" as="style"/>
+    <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" rel="preload stylesheet" as="style"/>
   {{ end }}
 
   <!-- misc -->

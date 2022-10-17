@@ -1,41 +1,44 @@
 [home]
-other = "首页"
+other = "首頁"
 
 [tag]
-other = "标签"
+other = "標籤"
 
 [archive]
-other = "归档"
+other = "歸檔"
 
 [toggleTheme]
-other = "切换主题"
+other = "切換主題"
 
 [next]
-other = "下一页"
+other = "下一頁"
 
 [previous]
-other = "上一页"
+other = "上一頁"
 
 [readMore]
-other = "阅读更多"
+other = "閱讀更多"
 
 [readingTime]
-other = "预计阅读 {{ .Count }} 分钟"
+other = "預計閱讀 {{ .Count }} 分鐘"
 
 [comment]
-other = "评论"
+other = "評論"
 
 [publishedAt]
-other = "发布于"
+other = "發布於"
 
 [updatedAt]
-other = "修改于"
+other = "修改於"
 
 [taggedWith]
-other = "标记为"
+other = "標記為"
 
 [shareWith]
 other = "分享在"
 
 [toc]
-other = "目录"
+other = "目錄"
+
+[searchPlaceHolder]
+other = "搜尋..."
