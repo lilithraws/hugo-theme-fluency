@@ -196,7 +196,7 @@ li.hashed-tag {
       content: ' ';
       border-right: 2px solid var(--theme-text-subtle);
       color: var(--theme-text);
-      margin: 17px 1.5em;
+      margin: 17px 0.7em;
     }
   }
 
@@ -1154,7 +1154,6 @@ li.hashed-tag {
     padding-left: 0;
   }
   .has-padding.container > * {
-    padding-right: 16px;
     padding-left: 16px;
   }
   #main.terms .term-columns {
