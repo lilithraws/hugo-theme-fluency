@@ -77,7 +77,7 @@ function fetchJSONFile(path, callback) {
 //
 function loadSearch() { 
   console.log('loadSearch()')
-  fetchJSONFile('/index.json', function(data){
+  fetchJSONFile('/index.json?' + new Date().getTime(), function(data){
 
     var options = { // fuse.js options; check fuse.js website for details
       shouldSort: true,
