@@ -64,15 +64,13 @@
     <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}" />
   {{ end}}
 
-  <!-- Reset -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/modern-normalize@1.0.0/modern-normalize.min.css">
-
   <!-- Use Hugo Pipes to process the Sass file (convert to CSS, minify, and add a hash) -->
   {{ $base_style := resources.Get "css/basic.scss" | toCSS }}
   {{ $main_style := resources.Get "css/main.scss" | toCSS }}
   {{ $search_style := resources.Get "css/search.scss" | toCSS }}
+  {{ $modern_normalize := resources.Get "css/modern-normalize.scss" | toCSS }}
 
-  {{ $CSS := slice $base_style $main_style $search_style | resources.Concat "style.css" }}
+  {{ $CSS := slice $base_style $main_style $search_style $modern_normalize | resources.Concat "style.css" }}
 
   {{ if not .Site.IsServer }}
     {{ $CSS := $CSS | minify | fingerprint }}
